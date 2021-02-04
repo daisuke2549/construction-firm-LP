@@ -1,0 +1,380 @@
+@charset "UTF-8";
+
+
+/*共通部分*/
+
+body {
+    font-size: 18px;
+    color: #333;
+    font-family: "ヒラギノ明朝 ProN", serif;
+    line-height: 1.6875;
+    margin:0;
+    text-align:center;
+}
+
+ul {
+list-style: none;
+}
+li{
+    list-style: none;
+}
+
+img {
+width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+button{
+    border:1px solid;
+}
+
+
+/*トップへ戻るボタン*/
+.floating{
+    position: relative;
+    right:10px;
+    bottom:10px;
+    display:none;
+}
+
+
+
+
+
+/*ヘッダー*/
+header{
+    width:100%;
+    background-size:cover;
+    height:1200px;
+    background-repeat: repeat-x;
+    background-image: url("../img/top-image.jpg");
+}
+
+
+.header-part{
+    display: flex;
+}
+
+.header-left{
+    margin:20px 0 0 40px;
+    font-size:24px;
+    position:fixed;
+}
+
+.header-right {
+    margin: 0 0 0 auto;
+
+    margin-right: 30px;
+    ul{
+    display:flex;
+    justify-content: flex-end;
+
+    }
+    li{
+        padding: 0 30px;
+
+
+    }
+
+}
+
+.header-main-title{
+    padding:auto 0;
+}
+
+.globalMenuSp{
+    display: none;
+}
+
+
+/*お知らせパート*/
+.company-info{
+
+    h2{
+      margin-top: 70px;
+    }
+
+}
+
+.info-items{
+    display: flex;
+    justify-content: center;
+
+
+    li{
+    padding-right:20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-bottom: 1px solid
+    }
+}
+
+
+.info-content{
+    font-size:20px;
+}
+
+.info-button button{
+    background-color:transparent;
+    font-size:14px;
+}
+
+/*施工事例*/
+.implementation{
+    margin-top: 100px;
+}
+.implementation-items{
+    display: flex;
+    margin: 0 0px;
+    width:100%;
+}
+
+.implementation-item{
+    width:100%;
+    img{
+
+    }
+    button{
+        background-color:transparent;
+    }
+}
+
+.implementation-item{
+     padding: 40px;
+}
+
+.implementation-bottom-button{
+    margin-top: 50px;
+
+    button{
+       padding:12px 40px;
+       font-size:20px;
+       color:#000;
+       background-color: transparent;
+    }
+}
+
+
+/*採用情報*/
+.recruit{
+    margin-top: 100px;
+}
+
+.recruit-image{
+    display: flex;
+
+}
+.recruit-image{
+    position: relative;
+    width:100%;
+
+    p {
+        vertical-align: middle;
+        margin-top: -150px;
+        font-size:24px;
+        color: #fff;
+        font-weight: italic;
+        opacity: 1;
+    }
+    img{
+        vertical-align: middle;
+        height:300px;
+    }
+
+}
+
+
+/*フッター*/
+
+footer{
+     background-color: #000;
+     margin-top: 85px;
+}
+
+
+.footer-part{
+    display: flex;
+}
+
+.footer-left{
+    color:#fff;
+margin:20px 0 0 40px;
+font-size:24px
+}
+
+.footer-right {
+    color:#fff;
+    margin: 0 0 0 auto;
+    margin-right: 30px;
+    ul{
+    display:flex;
+    justify-content: flex-end;
+    }
+    li{
+        padding: 0 30px;
+    }
+    a{
+        color:#fff;
+    }
+
+}
+
+.footer-main-title{
+    padding:auto 0;
+}
+
+.footer-copyright{
+    margin-top: 20px;
+    p{
+    color:#fff;
+    font-size:12px;
+    }
+}
+
+
+/*レスポンシブ*/
+@media screen and (max-width:768px){
+
+/*レスポンシブヘッダー*/
+header{
+    height:400px;
+}
+
+.header-left{
+    display: block;
+    margin:0 auto;
+}
+
+.header-right{
+    display: none;
+}
+
+.header-main-title{
+    vertical-align: auto;
+    margin-top: 100px;
+}
+
+
+
+/*　ハンバーガーボタン(レスポンシブ)　*/
+.hamburger {
+    display : block;
+    position: fixed;
+    z-index : 3;
+    right : 13px;
+    top   : 12px;
+    width : 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .hamburger span {
+    display : block;
+    position: absolute;
+    width   : 30px;
+    height  : 2px ;
+    left    : 6px;
+    background : #555;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition   : 0.3s ease-in-out;
+    transition        : 0.3s ease-in-out;
+  }
+  .hamburger span:nth-child(1) {
+    top: 10px;
+  }
+  .hamburger span:nth-child(2) {
+    top: 20px;
+  }
+  .hamburger span:nth-child(3) {
+    top: 30px;
+  }
+
+  /* ナビ開いてる時のボタン(レスポンシブ) */
+  .hamburger.active span:nth-child(1) {
+    top : 16px;
+    left: 6px;
+    background :#fff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform   : rotate(-45deg);
+    transform        : rotate(-45deg);
+  }
+
+  .hamburger.active span:nth-child(2),
+  .hamburger.active span:nth-child(3) {
+    top: 16px;
+    background :#fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform   : rotate(45deg);
+    transform        : rotate(45deg);
+  }
+
+  nav.globalMenuSp {
+    position: fixed;
+    z-index : 2;
+    top  : 0;
+    left : 0;
+    color: #fff;
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    display:block;
+    width: 100%;
+
+    opacity: 0;
+    transition: opacity .6s ease, visibility .6s ease;
+  }
+
+  nav.globalMenuSp ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+
+  nav.globalMenuSp ul li {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    transition: .4s all;
+  }
+  nav.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+  }
+  nav.globalMenuSp ul li:hover{
+    background :#ddd;
+  }
+
+  nav.globalMenuSp ul li a {
+    display: block;
+    color: #fff;
+    padding: 1em 0;
+    text-decoration :none;
+  }
+
+  /* このクラスを、jQueryで付与・削除する */
+  nav.globalMenuSp.active {
+    opacity: 100;
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

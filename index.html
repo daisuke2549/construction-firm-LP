@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>佐藤建設</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src = "./js/main.js" ></script>
+    <!-- jquery & iScroll -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+    <!-- drawer.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+</head>
+<body>
+<header>
+<div class="header-part">
+<div class="header-left">佐藤建設</div>
+<div class="header-right">
+        <ul class="drawer-menu header-nav-list">
+          <li class="header-nav-item">
+             <a class="header-nav-item-link" href="#company">企業理念</a>
+          </li>
+          <li class="header-nav-item">
+              <a class="header-nav-item-link" href="#implementation">施工事例</a>
+          </li>
+          <li class="header-nav-item">
+              <a class="header-nav-item-link" href="#recruit">採用情報</a>
+          </li>
+          <li class="header-nav-item">
+              <a class="header-nav-item-link" href="#contact">お問い合わせ</a>
+          </li>
+        </ul>
+</div>
+</div>
+<div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+  <nav class="globalMenuSp">
+      <ul>
+        <li><a href="index.html">TOP</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#product">PRODUCT</a></li>
+        <li><a href="#news">NEWS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+  </nav>
+
+
+
+
+<div class="header-main-title">
+    <h1>素敵な街を作る</h1>
+</div>
+
+<div class="floating">
+    <a href="#">トップへ戻る</a>
+</div>
+
+
+
+
+</header>
+<section class="company-info" id="#company">
+    <h2>お知らせ</h2>
+<div class="info-part">
+  <div class="info-items">
+    <li><div class="info-date"><time datetime=”2021-11-17”>2020.11.17</time></div></li>
+    <li><div class="info-button"><button>お知らせ</button></div></li>
+    <li><div class="info-content">本社事務所が渋谷に決まりました。</div></li>
+  </div>
+  <div class="info-items">
+    <li><div class="info-date"><time datetime=”2021-11-17”>2020.11.17</time></div></li>
+    <li><div class="info-button"><button>お知らせ</button></div></li>
+    <li><div class="info-content">本社事務所が渋谷に決まりました。</div></li>
+  </div>
+  <div class="info-items">
+    <li><div class="info-date"><time datetime=”2021-11-17”>2020.11.17</time></div></li>
+    <li><div class="info-button"><button>お知らせ</button></div></li>
+    <li><div class="info-content">本社事務所が渋谷に決まりました。</div></li>
+  </div>
+
+</div>
+</section>
+
+<section class="implementation" id="#implementation">
+    <h2>施工事例</h2>
+<div class="implementation-items">
+    <div class="implementation-item">
+        <img src="./img/house.jpg" alt="新築住宅">
+        <h3>鈴木様邸新築工事</h3>
+        <p>東京都調布市</p>
+        <button>詳細を確認する</button>
+    </div>
+    <div class="implementation-item">
+        <img src="./img/building.jpg" alt="世田谷スカイビル">
+        <h3>世田谷スカイビル</h3>
+        <p>東京都世田谷区</p>
+        <button>詳細を確認する</button>
+    </div>
+
+</div>
+<div class="implementation-bottom-button">
+    <button>施工実績一覧</button>
+</div>
+</section>
+
+
+<section class="recruit" id="recruit">
+    <div class="recruit-image">
+        <div>
+            <img src="./img/recruit.jpeg" alt="企業理念">
+            <p>企業理念</p>
+        </div>
+        <div>
+            <img src="./img/building.jpg" alt="採用情報">
+            <p>採用情報</p>
+        </div>
+        <div>
+            <img src="./img/recruit.jpeg" alt="お問い合わせ">
+            <p>お問い合わせ</p>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="footer-part">
+        <div class="footer-left">佐藤建設</div>
+        <div class="footer-right">
+                <ul class="drawer-menu footer-nav-list">
+                  <li class="footer-nav-item">
+                     <a class="footer-nav-item-link" href="#company">企業理念</a>
+                  </li>
+                  <li class="footer-nav-item">
+                      <a class="footer-nav-item-link" href="#implementation">施工事例</a>
+                  </li>
+                  <li class="footer-nav-item">
+                      <a class="footer-nav-item-link" href="#recruit">採用情報</a>
+                  </li>
+                  <li class="footer-nav-item">
+                      <a class="footer-nav-item-link" href="#contact">お問い合わせ</a>
+                  </li>
+                </ul>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <p>Copyright@Sato-construction-firm-all-right-reserved</p>
+    </div>
+</footer>
+<script>
+$(function(){
+        // #で始まるリンクをクリックしたら実行されます
+        $('a[href^="#"]').click(function() {
+          // スクロールの速度
+          var speed = 4000; // ミリ秒で記述
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top;
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        });
+      });
+      $(function() {
+    $('.hamburger').click(function() {
+        $(this).toggleClass('active');
+
+        if ($(this).hasClass('active')) {
+            $('.globalMenuSp').addClass('active');
+        } else {
+            $('.globalMenuSp').removeClass('active');
+        }
+    });
+});
+
+$(function(){
+   $('.header-left').on('click', function(){
+   $('.header-left').css('color', 'blue');
+  });
+});
+
+
+$(function(){
+  var pagetop = $('#page_top');
+  // ボタン非表示
+  pagetop.hide();
+
+  // 100px スクロールしたらボタン表示
+  $(window).scroll(function () {
+     if ($(this).scrollTop() > 100) {
+          pagetop.fadeIn();
+     } else {
+          pagetop.fadeOut();
+     }
+  });
+  pagetop.click(function () {
+     $('body, html').animate({ scrollTop: 0 }, 500);
+     return false;
+  });
+});
+
+</script>
+
+</body>
+</html>
