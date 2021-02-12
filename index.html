@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>✖️✖️️建設</title>
     <link rel="stylesheet" href="./css/style.css">
-    <!-- jquery & iScroll -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/animate.css">
+     <script src="./js/wow.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
     <!-- drawer.js -->
@@ -15,20 +21,20 @@
 <div class="wrap">
 <header>
 <div class="header-part">
-<div class="header-left">✖️✖️️建設</div>
+<div class="header-left wow shake">✖️✖️️建設</div>
 <div class="header-right">
         <ul class="drawer-menu header-nav-list">
           <li class="header-nav-item">
-             <a class="header-nav-item-link" href="#company">企業理念</a>
+             <a class="header-nav-item-link wow fadeInLeftBig" href="#company-policy">企業理念</a>
           </li>
           <li class="header-nav-item">
-              <a class="header-nav-item-link" href="#implementation">施工事例</a>
+              <a class="header-nav-item-link wow fadeInLeftBig" href="#implementation">施工事例</a>
           </li>
           <li class="header-nav-item">
-              <a class="header-nav-item-link" href="#recruit">採用情報</a>
+              <a class="header-nav-item-link wow fadeInLeftBig" href="#recruit">採用情報</a>
           </li>
           <li class="header-nav-item">
-              <a class="header-nav-item-link" href="#contact">お問い合わせ</a>
+              <a class="header-nav-item-link wow fadeInLeftBig" href="#contact">お問い合わせ</a>
           </li>
         </ul>
 </div>
@@ -41,7 +47,7 @@
 
   <nav class="globalMenuSp">
       <ul>
-        <li><a class="header-nav-item-link" href="#company">企業理念</a></li>
+        <li><a class="header-nav-item-link" href="#company-policy">企業理念</a></li>
         <li><a class="header-nav-item-link" href="#implementation">施工事例</a></li>
         <li><a class="header-nav-item-link" href="#recruit">採用情報</a></li>
         <li><a class="header-nav-item-link" href="#contact">お問い合わせ</a></li>
@@ -51,19 +57,18 @@
 
 
 
-<div class="header-main-title">
+<div class="header-main-title wow fadeInRightBig">
     <h1>素敵な街を作る</h1>
 </div>
-
 <div class="floating">
-    <a href="#">トップへ戻る</a>
+<a href="#">トップへ戻る</a>
 </div>
-
-
-
-
 </header>
-<section class="company-info" id="company">
+<section class="company-policy wow fadeIn" id="company-policy">
+    <h2>企業理念</h2>
+    <p>私たちは地域に根ざした建造物の施工に特化したローカルの建設会社です。<br>土木工事、建築工事、通信工事、電気工事を請負します。</p>
+</section>
+<section class="company-info wow fadeIn" id="company">
     <h2>お知らせ</h2>
 <div class="info-part">
   <div class="info-items">
@@ -85,30 +90,81 @@
 </div>
 </section>
 
-<section class="implementation" id="implementation">
+<section class="implementation  wow fadeIn" id="implementation">
     <h2>施工事例</h2>
-<div class="implementation-items">
-    <div class="implementation-item">
-        <img src="./img/house.jpg" alt="新築住宅">
-        <h3>鈴木様邸新築工事</h3>
-        <p>東京都調布市</p>
-        <button>詳細を確認する</button>
+
+<div class="swiper-container wow fadeIn">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+    　　<div class="implementation-items">
+        <div class="implementation-item">
+            <img src="./img/house.jpg" alt="新築住宅">
+            <h3>鈴木様邸新築工事</h3>
+            <p>東京都調布市</p>
+            <button>詳細を確認する</button>
+        </div>
+        <div class="implementation-item">
+            <img src="./img/building.jpg" alt="世田谷スカイビル">
+            <h3>世田谷スカイビル</h3>
+            <p>東京都世田谷区</p>
+            <button>詳細を確認する</button>
+        </div>
     </div>
-    <div class="implementation-item">
-        <img src="./img/building.jpg" alt="世田谷スカイビル">
-        <h3>世田谷スカイビル</h3>
-        <p>東京都世田谷区</p>
-        <button>詳細を確認する</button>
+    ...
+　　　</div>
+<div class="swiper-slide">
+    　　<div class="implementation-items">
+        <div class="implementation-item">
+            <img src="./img/house3.jpg" alt="新築住宅">
+            <h3>田中様邸新築工事</h3>
+            <p>東京都狛江市</p>
+            <button>詳細を確認する</button>
+        </div>
+        <div class="implementation-item">
+            <img src="./img/building2.jpg" alt="世田谷スカイビル">
+            <h3>千葉スカイビル</h3>
+            <p>千葉県千葉市</p>
+            <button>詳細を確認する</button>
+        </div>
+    </div>
+    ...
+　　　</div>
+
+      <div class="swiper-slide">
+        <div class="swiper-slide">
+            <div class="implementation-items">
+            <div class="implementation-item">
+                <img src="./img/house2.jpeg" alt="新築住宅">
+                <h3>伊藤様邸新築工事</h3>
+                <p>神奈川県横浜市</p>
+                <button>詳細を確認する</button>
+            </div>
+            <div class="implementation-item">
+                <img src="./img/cafe.jpg" alt="世田谷スカイビル">
+                <h3>登戸カフェ</h3>
+                <p>神奈川県川崎市</p>
+                <button>詳細を確認する</button>
+            </div>
+        </div>
+      </div>
+
+      ...
     </div>
 
-</div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+  </div>
+
+
 <div class="implementation-bottom-button">
     <button>施工実績一覧</button>
 </div>
 </section>
 
 <section class="contact" id="contact">
-<div class="contact-form">
+<div class="contact-form wow fadeIn">
     <h2>お問い合わせ</h2>
     <div class="contact__item">
         <form action="#">
@@ -178,24 +234,14 @@
 
 
 
-
-
-
-
 </section>
 
 
+<section class="recruit wow fadeIn" id="recruit">
+    <h2>採用情報</h2>
+    <p>弊社では一緒に未来を作り、地域に貢献した仕事のできる従業員を募集しています。<br>土木工事、建築工事、通信工事、電気工事のいずれかに興味のある方はxxx@gmail.comまで履歴書、職務経歴書をお送りください。</p>
 
-
-
-
-
-
-
-
-
-<section class="recruit" id="recruit">
-    <div class="recruit-image">
+    <div class="recruit-image wow fadeIn">
         <div>
             <img src="./img/recruit.jpeg" alt="企業理念">
         </div>
@@ -208,7 +254,7 @@
     </div>
 </section>
 <footer>
-    <div class="footer-part">
+    <div class="footer-part wow fadeIn">
         <div class="footer-left">✖️✖️️✖️✖️️️建設</div>
         <div class="footer-right">
                 <ul class="drawer-menu footer-nav-list">
@@ -283,7 +329,69 @@ $(function(){
   });
 });
 
-</script>
 
+const swiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  slidesPerView: 1,
+  spaceBetween: 10,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 40
+    }
+  },
+   autoplay: {
+   delay: 3000,
+ },
+});
+
+jQuery(window).on("scroll", function($) {
+  if (jQuery(this).scrollTop() > 500) {
+    jQuery('.floating').show();
+  } else {
+    jQuery('.floating').hide();
+  }
+});
+
+jQuery('.floating').click(function () {
+  jQuery('body,html').animate({
+    scrollTop: 0
+  }, 500);
+  return false;
+});
+</script>
+<script src="./js/swiper-bundle.min.js"></script>
+<script>
+    new WOW().init();
+</script>
 </body>
 </html>

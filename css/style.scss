@@ -22,6 +22,9 @@ li{
 img {
 width: 100%;
 }
+img:hover{
+    opacity: 0.5;
+}
 
 a{
     text-decoration: none;
@@ -36,17 +39,46 @@ button{
 .wrap{
     overflow: hidden;
 }
+h2{
+  position: relative;
+  display: inline-block;
+  transition: 0.3s;
+}
+h2::after{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: #0000FF;
+    transition: 0.3s;
+}
+h2:hover::after{
+    width:100%;
+}
+
 
 
 /*トップへ戻るボタン*/
 .floating{
-    position: relative;
+    position: fixed;
     right:10px;
     bottom:10px;
     display:none;
 }
 
+.floating a{
+    display: block;
+    color:#fff;
+    background: #000;
+    padding:8px;
+    opacity: 0.6;
+}
 
+.floating a:hover {
+    opacity: 1;
+  }
 
 
 
@@ -96,6 +128,43 @@ header{
 }
 
 
+.header-nav-item a{
+    position: relative;
+}
+
+
+
+.header-nav-item a::after{
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+
+.header-nav-item a:hover::after {
+    bottom: -4px;
+    opacity: 1;
+    visibility: visible;
+}
+
+/*企業理念*/
+.company-policy{
+    margin-bottom: 40px;
+    margin-top: 60px;
+
+}
+
+
+
+
+
 /*お知らせパート*/
 .company-info{
 
@@ -113,7 +182,7 @@ header{
     justify-content: center;
     width: 700px;
     margin:0 auto;
-    
+
 
     li{
     padding-right:20px;
@@ -148,13 +217,14 @@ header{
     img{
        height:500px;
     }
+
     button{
         background-color:transparent;
     }
 }
 
 .implementation-item{
-     padding: 40px;
+     padding: 50px;
 }
 
 .implementation-bottom-button{
@@ -173,14 +243,14 @@ header{
     font-size: 16px;
     font-weight: 700;
   }
-  
+
 
     .contact__label {
       font-size: 16px;
       display: inline-block;
     }
 
-  
+
   .contact__label--required {
     position: relative;
   }
@@ -206,7 +276,7 @@ header{
 .contact__control:last-child {
     margin-bottom: 0;
   }
-  
+
 .contact__control dt {
     width: 160px;
     padding: 6px 0 0;
@@ -222,7 +292,7 @@ header{
 .contact__radio-item {
     margin-right: 32px;
   }
-  
+
   .contact__radio-item:last-child {
     margin-right: 0;
   }
@@ -236,7 +306,7 @@ header{
   .contact__label--required {
     position: relative;
   }
-  
+
 
 /*採用情報*/
 .recruit{
@@ -289,6 +359,15 @@ font-size:24px
     }
     a{
         color:#fff;
+        transform: scale(1);
+        display: inline-block;
+    }
+    a:hover{
+        transition: .3s;
+        color:#F00;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        transform: rotate(15deg);
     }
 
 }

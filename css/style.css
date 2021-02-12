@@ -21,6 +21,10 @@ img {
   width: 100%;
 }
 
+img:hover {
+  opacity: 0.5;
+}
+
 a {
   text-decoration: none;
   color: #333;
@@ -35,12 +39,47 @@ button {
   overflow: hidden;
 }
 
+h2 {
+  position: relative;
+  display: inline-block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+h2::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 0;
+  height: 1px;
+  background-color: #0000FF;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+h2:hover::after {
+  width: 100%;
+}
+
 /*トップへ戻るボタン*/
 .floating {
-  position: relative;
+  position: fixed;
   right: 10px;
   bottom: 10px;
   display: none;
+}
+
+.floating a {
+  display: block;
+  color: #fff;
+  background: #000;
+  padding: 8px;
+  opacity: 0.6;
+}
+
+.floating a:hover {
+  opacity: 1;
 }
 
 /*ヘッダー*/
@@ -53,6 +92,9 @@ header {
 }
 
 .header-part {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -68,8 +110,14 @@ header {
 }
 
 .header-right ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .header-right li {
@@ -84,14 +132,50 @@ header {
   display: none;
 }
 
+.header-nav-item a {
+  position: relative;
+}
+
+.header-nav-item a::after {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.header-nav-item a:hover::after {
+  bottom: -4px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/*企業理念*/
+.company-policy {
+  margin-bottom: 40px;
+  margin-top: 60px;
+}
+
 /*お知らせパート*/
 .company-info h2 {
   margin-top: 70px;
 }
 
 .info-items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 700px;
   margin: 0 auto;
 }
@@ -118,6 +202,9 @@ header {
 }
 
 .implementation-items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 0px;
   width: 100%;
@@ -136,7 +223,7 @@ header {
 }
 
 .implementation-item {
-  padding: 40px;
+  padding: 50px;
 }
 
 .implementation-bottom-button {
@@ -182,6 +269,7 @@ header {
   margin-bottom: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
 }
 
@@ -198,7 +286,8 @@ header {
 .contact__control dd {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
-  flex-grow: 1;
+  -webkit-flex-grow: 1;
+          flex-grow: 1;
   padding: 0;
   margin: 0;
 }
@@ -228,6 +317,9 @@ header {
 }
 
 .recruit-image {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -248,6 +340,9 @@ footer {
 }
 
 .footer-part {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -264,8 +359,14 @@ footer {
 }
 
 .footer-right ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .footer-right li {
@@ -274,6 +375,19 @@ footer {
 
 .footer-right a {
   color: #fff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  display: inline-block;
+}
+
+.footer-right a:hover {
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #F00;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
 }
 
 .footer-main-title {
@@ -326,7 +440,6 @@ footer {
     left: 6px;
     background: #555;
     -webkit-transition: 0.3s ease-in-out;
-    -moz-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
   }
   .hamburger span:nth-child(1) {
@@ -344,15 +457,13 @@ footer {
     left: 6px;
     background: #fff;
     -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
   .hamburger.active span:nth-child(2),
-.hamburger.active span:nth-child(3) {
+  .hamburger.active span:nth-child(3) {
     top: 16px;
     background: #fff;
     -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
     transform: rotate(45deg);
   }
   nav.globalMenuSp {
@@ -366,6 +477,7 @@ footer {
     display: block;
     width: 100%;
     opacity: 0;
+    -webkit-transition: opacity .6s ease, visibility .6s ease;
     transition: opacity .6s ease, visibility .6s ease;
   }
   nav.globalMenuSp ul {
@@ -377,6 +489,7 @@ footer {
     list-style-type: none;
     padding: 0;
     width: 100%;
+    -webkit-transition: .4s all;
     transition: .4s all;
   }
   nav.globalMenuSp ul li:last-child {
@@ -458,3 +571,4 @@ footer {
     padding-bottom: 5px;
   }
 }
+/*# sourceMappingURL=style.css.map */
